@@ -1,18 +1,28 @@
 <?php get_header(); ?>
 
-	<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
-		
-		<article <?php post_class(); ?>>
-			
-			<header>
-				<h1><?php the_title(); ?></h1>
-			</header>
-			
-			<?php the_content(); ?>
+	<?php if( is_user_logged_in() && current_user_can( 'publish_posts' ) ): ?>
 
-		</article>
+		<?php if( have_posts() ): while( have_posts() ): the_post(); ?>
+			
+			<article <?php post_class(); ?>>
+				
+				<header>
+					<h1><?php the_title(); ?></h1>
+				</header>
+				
+				<?php the_content(); ?>
 
-	<?php endwhile; endif; ?>
+			</article>
+
+		<?php endwhile; endif; ?>
+
+	<?php else: ?>
+
+		<p>Please login to view posts</p>
+
+		<?php prowordpress_login_form(); ?>
+
+	<?php endif; ?>
 
 	<?php get_sidebar('news'); ?>
 

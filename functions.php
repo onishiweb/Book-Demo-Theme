@@ -5,6 +5,29 @@
  * @package prowordpress
  */
 
+/**
+ * Include our custom types functions
+ */
+require( get_template_directory() . '/inc/custom-types.php' );
+
+/**
+ * Include custom theme functions
+ */
+require( get_template_directory() . '/inc/theme-functions.php' );
+/**
+ * Include the custom widgets file
+ */
+require( get_template_directory() . '/inc/custom-widgets.php' );
+/**
+ * Include the theme options file
+ */
+require( get_template_directory() . '/inc/theme-options.php' );
+
+/**
+ * Include the users file - contains all functions for working with users on the site
+ */
+require( get_template_directory() . '/inc/users.php' );
+
 if ( ! function_exists( 'prowordpress_setup' ) ) :
 
 	function prowordpress_setup() {
@@ -30,33 +53,10 @@ if ( ! function_exists( 'prowordpress_setup' ) ) :
 		 * Enable support for Post Formats
 		 */
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
-		/**
-		 * Include our custom types functions
-		 */
-		require( get_template_directory() . '/inc/custom-types.php' );
-
-		/**
-		 * Include custom theme functions
-		 */
-		require( get_template_directory() . '/inc/theme-functions.php' );
-		/**
-		 * Include the custom widgets file
-		 */
-		require( get_template_directory() . '/inc/custom-widgets.php' );
-		/**
-		 * Include the theme options file
-		 */
-		require( get_template_directory() . '/inc/theme-options.php' );
-		/**
-		 * Include the users file - contains all functions for working with users on the site
-		 */
-		require( get_template_directory() . '/inc/users.php' );
 	}
 
 endif; // ao_starter_setup
 add_action( 'after_setup_theme', 'prowordpress_setup' );
-
 
 /**
  * Enqueue scripts and styles
@@ -64,8 +64,8 @@ add_action( 'after_setup_theme', 'prowordpress_setup' );
 function prowordpress_scripts_and_styles() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	$palette = get_theme_mod('color_palette', 'palette-1');
-	wp_enqueue_style( 'palette', get_template_directory_uri() . '/css/' . $palette . '.css' , array('style') );
+	// $palette = get_theme_mod('color_palette', 'palette-1');
+	// wp_enqueue_style( 'palette', get_template_directory_uri() . '/css/' . $palette . '.css' , array('style') );
 
 	/**
 	 * Better jQuery inclusion
