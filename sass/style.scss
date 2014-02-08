@@ -1,4 +1,4 @@
-/**
+/*!
 * Theme Name: Pro WordPress
 * Author: Adam Onishi
 * Author URI: http://adamonishi.com
@@ -7,3 +7,65 @@
 * Text Domain: prowordpress
 */
 
+@import 'variables';
+
+body {
+	font-family:$font-body;
+	font-size:16px;
+	color:$clr-text;
+	background-color:lighten(#D9BB96, 17%); // #FBF7E6;
+}
+
+h1,h2,h3 {
+	color:$clr-headers;
+	font-family:$font-headers;
+}
+
+h1 {
+	text-align:center;
+
+	a {
+		font-size:64px;
+		color:$clr-headers;
+	}	
+} 
+
+h2 {
+	font-size:32px;
+}
+
+h3 {
+	font-size:24px;
+}
+
+h4 {
+	font-size:16px;
+	color:$clr-headers;
+}
+
+a {
+	text-decoration:none;
+}
+
+.container {
+	max-width:1200px;
+	width:90%;
+	margin:0 auto;
+}
+
+.main-navigation ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+
+	li {
+		display:inline;
+
+		a {
+			padding:0 15px;
+			font-size:16px;
+			color:$clr-headers;
+		}
+	}
+}

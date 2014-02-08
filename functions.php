@@ -62,7 +62,9 @@ add_action( 'after_setup_theme', 'prowordpress_setup' );
  * Enqueue scripts and styles
  */
 function prowordpress_scripts_and_styles() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Clicker+Script|EB+Garamond' );
+	wp_enqueue_style( 'style', get_stylesheet_uri(), array( 'fonts' ) );
+
 
 	// $palette = get_theme_mod('color_palette', 'palette-1');
 	// wp_enqueue_style( 'palette', get_template_directory_uri() . '/css/' . $palette . '.css' , array('style') );

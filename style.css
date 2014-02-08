@@ -1,9 +1,79 @@
-/**
+/*
 * Theme Name: Pro WordPress
 * Author: Adam Onishi
 * Author URI: http://adamonishi.com
 * Description: An example theme for the Pro WordPress theme development book
-* Version: 0.3
+* Version: 0
 * Text Domain: prowordpress
 */
+/* Variables
+ =========================================*/
+/* line 12, sass/style.scss */
+body {
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  color: #2f2b2c;
+  background-color: #f0e4d6;
+}
 
+/* line 19, sass/style.scss */
+h1, h2, h3 {
+  color: #593d36;
+  font-family: "Clicker Script", cursive;
+}
+
+/* line 24, sass/style.scss */
+h1 {
+  text-align: center;
+}
+/* line 27, sass/style.scss */
+h1 a {
+  font-size: 64px;
+  color: #593d36;
+}
+
+/* line 33, sass/style.scss */
+h2 {
+  font-size: 32px;
+}
+
+/* line 37, sass/style.scss */
+h3 {
+  font-size: 24px;
+}
+
+/* line 41, sass/style.scss */
+h4 {
+  font-size: 16px;
+  color: #593d36;
+}
+
+/* line 46, sass/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 50, sass/style.scss */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 56, sass/style.scss */
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* line 62, sass/style.scss */
+.main-navigation ul li {
+  display: inline;
+}
+/* line 65, sass/style.scss */
+.main-navigation ul li a {
+  padding: 0 15px;
+  font-size: 16px;
+  color: #593d36;
+}

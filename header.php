@@ -26,17 +26,17 @@
 
 <body <?php body_class(); ?>>
 
-	<header>
-		<!-- <h1><a href="<?php home_url('/'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Pro WordPress Theme Development"></a></h1> -->
-<h1>
-	<a href="<?php home_url( '/' ); ?>">
-		<img src="<?php echo get_theme_mod('site_logo'); ?>" alt="<?php bloginfo( 'blogname' ); ?>" class="site-logo">
-	</a>
-</h1>
-	</header>
+	<div class="container">
+		<header>
+			<h1>
+				<a href="<?php home_url( '/' ); ?>">
+					<?php bloginfo( 'blogname' ); ?>
+				</a>
+			</h1>
+		</header>
 
-	<nav class="main-navigation">
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false )); ?>
-	</nav>
-	
-	<div class="main" role="main">
+		<nav class="main-navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false )); ?>
+		</nav>
+		
+		<div class="main" role="main">
