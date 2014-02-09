@@ -5,34 +5,34 @@
 		<?php the_content(); ?>
 	</article>
 
-<aside class="featured-item">
-	<h2>Featured item</h2>
+	<aside class="featured-item">
+		<h2>Featured item</h2>
 
-	<?php
-	// New query for featured menu item
-	$item_id = get_theme_mod( 'featured_item' );
-	$args = array( 
-			'post_type'       => 'ptd_menu',
-			'posts_per_page'  => 1,
-			'p'               => $item_id,
-		);
+		<?php
+		// New query for featured menu item
+		$item_id = get_theme_mod( 'featured_item' );
+		$args = array( 
+				'post_type'       => 'ptd_menu',
+				'posts_per_page'  => 1,
+				'p'               => $item_id,
+			);
 
-	$featured = new WP_Query( $args );
+		$featured = new WP_Query( $args );
 
-	if( $featured->have_posts() ): while( $featured->have_posts() ): $featured->the_post();
-	?>
-		<article <?php post_class(); ?>>
-			<h3><?php the_title(); ?></h3>
+		if( $featured->have_posts() ): while( $featured->have_posts() ): $featured->the_post();
+		?>
+			<article <?php post_class(); ?>>
+				<h3><?php the_title(); ?></h3>
 
-			<?php the_post_thumbnail( 'small'); ?>
+				<?php the_post_thumbnail( 'small'); ?>
 
-			<a href="<?php the_permalink(); ?>">Find our more &raquo;</a>
-		</article>
-	<?php endwhile; endif; ?>
+				<a href="<?php the_permalink(); ?>">Find our more &raquo;</a>
+			</article>
+		<?php endwhile; endif; ?>
 
-	<?php wp_reset_query(); ?>
+		<?php wp_reset_query(); ?>
 
-</aside>
+	</aside>
 
 	<aside class="latest-news">
 		<?php if( ! dynamic_sidebar( 'homepage-widget-area' ) ): ?>
