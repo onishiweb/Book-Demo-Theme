@@ -1,4 +1,4 @@
-/*
+/*!
 * Theme Name: Pro WordPress
 * Author: Adam Onishi
 * Author URI: http://adamonishi.com
@@ -221,7 +221,7 @@ figure {
 
 /* line 368, sass/_normalize.scss */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -330,60 +330,75 @@ body {
   padding: 0;
   font-family: "EB Garamond", serif;
   font-size: 16px;
+  line-height: 1.375;
   color: #2f2b2c;
   background: url(images/backgrounds/bg-1.jpg) center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-/* line 29, sass/style.scss */
+/* line 30, sass/style.scss */
 h1, h2, h3 {
   color: #593d36;
   font-family: "Clicker Script", cursive;
 }
 
-/* line 34, sass/style.scss */
+/* line 35, sass/style.scss */
 h1 {
   margin: 10px 0;
   text-align: center;
-}
-/* line 38, sass/style.scss */
-h1 a {
   font-size: 40px;
+}
+/* line 40, sass/style.scss */
+h1 a {
   color: #593d36;
+}
+/* line 41, sass/style.scss */
+h1 a:hover {
+  color: #593d36;
+  text-decoration: none;
 }
 
 /* line 44, sass/style.scss */
 h2 {
+  margin-bottom: 16px;
   font-size: 32px;
 }
 
-/* line 48, sass/style.scss */
+/* line 49, sass/style.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 52, sass/style.scss */
+/* line 53, sass/style.scss */
 h4 {
-  font-size: 16px;
+  font-size: 14px;
   color: #593d36;
 }
 
-/* line 57, sass/style.scss */
+/* line 58, sass/style.scss */
 p {
   font-family: "EB Garamond", serif;
+  font-size: 14px;
+  margin: 0 0 10px;
 }
 
-/* line 61, sass/style.scss */
+/* line 64, sass/style.scss */
 a {
   text-decoration: none;
+  color: #47588c;
+}
+/* line 68, sass/style.scss */
+a:hover {
+  color: #3f4f7e;
+  text-decoration: underline;
 }
 
-/* line 65, sass/style.scss */
+/* line 74, sass/style.scss */
 .container {
   position: fixed;
   left: 10%;
-  width: 320px;
+  width: 400px;
   height: 100%;
   margin: 0;
   padding: 20px;
@@ -393,4 +408,121 @@ a {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+/* line 90, sass/style.scss */
+nav.menu ul {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid #593d36;
+}
+/* line 95, sass/style.scss */
+nav.menu ul li {
+  display: inline;
+}
+/* line 98, sass/style.scss */
+nav.menu ul li a {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* line 105, sass/style.scss */
+.main-navigation ul {
+  margin: 0 0 20px;
+  text-align: center;
+  border-bottom: 1px solid #593d36;
+}
+/* line 110, sass/style.scss */
+.main-navigation ul li a {
+  padding: 0 5px;
+}
+
+/* line 115, sass/style.scss */
+.footer-navigation ul li a {
+  padding: 0 10px 0 0;
+}
+
+/* line 119, sass/style.scss */
+article h1 {
+  text-align: left;
+}
+
+/* line 123, sass/style.scss */
+.latest-news, .featured-item article {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #593d36;
+}
+
+/* line 129, sass/style.scss */
+.latest-news article {
+  padding-bottom: 15px;
+}
+
+/* line 133, sass/style.scss */
+article.ptd_menu {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #593d36;
+}
+/* line 137, sass/style.scss */
+article.ptd_menu header h1 {
+  font-size: 18px;
+  text-align: left;
+}
+
+/* line 143, sass/style.scss */
+article.ptd_staff {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #593d36;
+}
+/* line 147, sass/style.scss */
+article.ptd_staff .thumbnail img {
+  display: block;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(89, 61, 54, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(89, 61, 54, 0.5);
+  box-shadow: 0 0 10px rgba(89, 61, 54, 0.5);
+}
+/* line 158, sass/style.scss */
+article.ptd_staff header h1 {
+  font-size: 24px;
+}
+/* line 161, sass/style.scss */
+article.ptd_staff header h1 span {
+  font-size: 20px;
+}
+
+/* line 165, sass/style.scss */
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+/* line 171, sass/style.scss */
+.user-form ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 175, sass/style.scss */
+.user-form ul li {
+  margin: 0 0 10px;
+}
+
+/* line 180, sass/style.scss */
+.user-form label {
+  display: block;
+}
+
+/* line 186, sass/style.scss */
+.user-form input[type=text],
+.user-form input[type=email],
+.user-form input[type=password] {
+  border: 0;
+  width: 100%;
+  padding: 5px;
 }

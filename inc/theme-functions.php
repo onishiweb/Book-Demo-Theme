@@ -52,16 +52,14 @@ function prowordpress_customise_feed($args) {
 add_filter('request', 'prowordpress_customise_feed');
 
 function prowordpress_build_our_menu(){
-	$menu_terms = get_terms( 'ptd_menu_category' );
-
-	// print_r($menu_terms);
+	$menu_terms = get_terms( 'ptd_menu_category', array( 'order' => 'DESC' ) );
 
 	if( $menu_terms ){
 		foreach( $menu_terms  as $term ){
             
 			$args = array(
 				'post_type' => 'ptd_menu',
-				"tax_query" => array(
+				'tax_query' => array(
 						array(
 							'taxonomy' => 'ptd_menu_category',
 							'field'    => 'slug',

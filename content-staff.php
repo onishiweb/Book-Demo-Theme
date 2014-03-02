@@ -1,12 +1,10 @@
 		<article <?php post_class(); ?>>
-			<header>
-				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+			<div class="thumbnail">
 				<?php if( has_post_thumbnail() ): ?>
 					<?php the_post_thumbnail(); ?>
 				<?php endif; ?>
+			</div>
+			<header>
+				<h1><?php the_title(); ?> - <span><?php echo get_the_term_list( get_the_id(), 'ptd_job_roles'); ?></span></h1>
 			</header>
-			
-			<?php the_excerpt(); ?>
-
-			<p><a href="<?php the_permalink(); ?>">Read more &raquo;</a></p>
 		</article>

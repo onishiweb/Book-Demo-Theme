@@ -18,7 +18,7 @@
 
 	<?php else: ?>
 
-		<p>Please login to view posts</p>
+		<p>Please login or <a href="<?php echo home_url( 'register' ); ?>">register</a> to view posts</p>
 
 		<?php prowordpress_login_form(); ?>
 

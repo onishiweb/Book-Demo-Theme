@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
 
-	<h1>Our menu</h1>
+	<h2>Our menu</h2>
 
 	<?php if( have_posts() ): ?>
 
@@ -18,7 +18,7 @@
 	<?php else: ?>
 		
 		<article class="error">
-			<h1>Sorry there were no news articles found</h1>
+			<h3>Sorry there were no news articles found</h3>
 		</article>
 
 	<?php endif; ?>

@@ -2,6 +2,11 @@
 
 	<h1>Our team</h1>
 
+	<?php
+	global $query_string;
+	query_posts( $query_string . '&orderby=menu_order' ); 
+	?>
+
 	<?php if( have_posts() ): ?>
 
 		<?php while( have_posts() ): the_post(); ?>

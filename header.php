@@ -29,13 +29,13 @@
 	<div class="container">
 		<header>
 			<h1>
-				<a href="<?php home_url( '/' ); ?>">
+				<a href="<?php echo home_url( '/' ); ?>">
 					<?php bloginfo( 'blogname' ); ?>
 				</a>
 			</h1>
 		</header>
 
-		<nav class="main-navigation">
+		<nav class="menu main-navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false )); ?>
 		</nav>
 		
